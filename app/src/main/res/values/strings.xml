@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Leon_Zea</string>
+    <string name="producto">Producto</string>
+    <string name="precio">Precio</string>
 </resources>

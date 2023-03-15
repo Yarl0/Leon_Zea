@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,21 @@ public class MainActivity extends AppCompatActivity {
 
         AdaptadorPersonalizado miadaptador = new AdaptadorPersonalizado(listaPrincipalProducto);
 
+        miadaptador.setOnItemClickListener(new AdaptadorPersonalizado.OnItemClickListener() {
+            @Override
+            public void onItemClick(Producto producto, int posicion) {
+                Toast.makeText(MainActivity.this, "Hice Click desde Activity"+producto.getNombre(),Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onItembtnEraseClick(Producto producto, int posicion) {
+
+                listaPrincipalProducto.remove(posicion);
+                miadaptador.setListinfo(listaPrincipalProducto);
+
+            }
+        });
+
         recvwpro.setAdapter(miadaptador);
         recvwpro.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -31,17 +47,17 @@ public class MainActivity extends AppCompatActivity {
         Producto producto1= new Producto();
         producto1.setNombre("PC Hp");
         producto1.setPrecio(800000.0);
-        producto1.setUrl_img("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fes%2Ffree-png-xwjkk&psig=AOvVaw2ggnGtME6Rz7sOmBQoaXlC&ust=1678917060199000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCIjmy8uz3P0CFQAAAAAdAAAAABAm");
+        producto1.setUrl_img("https://w7.pngwing.com/pngs/164/206/png-transparent-black-hp-computer-set-hewlett-packard-laptop-hp-pavilion-desktop-computer-dell-computer-desktop-pc-electronics-computer-computer-monitor-accessory.png");
 
         Producto producto2 = new Producto();
         producto2.setNombre("teclado");
         producto2.setPrecio(50000.0);
-        producto2.setUrl_img("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngimg.com%2Fimage%2F5869&psig=AOvVaw1UyhZcGbTi5_Enu5COipbP&ust=1678917297888000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCPD3xbu03P0CFQAAAAAdAAAAABAD");
+        producto2.setUrl_img("https://tauretcomputadores.com/images/products/Product_202204251623411080508427.png");
 
         Producto producto3 = new Producto();
         producto3.setNombre("Mouse");
         producto3.setPrecio(10000.0);
-        producto3.setUrl_img("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngall.com%2Fes%2Fpc-mouse-png&psig=AOvVaw02hl23W_RtATuuVNVKwQ7s&ust=1678917266238000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKjkray03P0CFQAAAAAdAAAAABAH");
+        producto3.setUrl_img("https://png.pngtree.com/png-vector/20220703/ourmid/pngtree-illustration-of-gaming-mouse-png-image_5563085.png");
 
         listaPrincipalProducto =new ArrayList<>();
         listaPrincipalProducto.add(producto1);

@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/itm_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
@@ -21,17 +21,35 @@
         android:id="@+id/tv_itm_nombre"
         android:layout_width="65dp"
         android:layout_height="29dp"
-        android:layout_marginStart="97dp"
-        android:text="Producto"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/producto"
+        app:layout_constraintBottom_toTopOf="@+id/itm_precio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/itm_img"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
 
     <TextView
         android:id="@+id/itm_precio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Precio"
+        android:layout_marginBottom="4dp"
+        android:text="@string/precio"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/itm_img"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toEndOf="@+id/itm_img" />
+
+    <Button
+        android:id="@+id/btnErase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
