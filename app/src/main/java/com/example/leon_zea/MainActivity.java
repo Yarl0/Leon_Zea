@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(getString(R.string.txt_listadp));
         cargarDatos();
 
         recvwpro=findViewById(R.id.recvwpro);
@@ -28,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
         miadaptador.setOnItemClickListener(new AdaptadorPersonalizado.OnItemClickListener() {
             @Override
             public void onItemClick(Producto producto, int posicion) {
-                Toast.makeText(MainActivity.this, "Hice Click desde Activity"+producto.getNombre(),Toast.LENGTH_LONG).show();
+
+                Intent intent =new Intent(MainActivity.this, Detalleactivity.class);
+                intent.putExtra("producto",producto);
+                startActivity(intent);
             }
 
             @Override
