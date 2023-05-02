@@ -92,4 +92,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(miIntent3);
         finish();
     }
+    public void ClickEdit(View view){
+        Intent miIntent4=new Intent(this,EditActivity.class);
+        startActivity(miIntent4);
+        finish();
+    }
 }

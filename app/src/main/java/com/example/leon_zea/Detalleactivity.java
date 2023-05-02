@@ -34,4 +34,5 @@ public class Detalleactivity extends AppCompatActivity {
 
 
     }
+
 }

@@ -25,14 +25,14 @@
                 android:id="@+id/edit_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="139dp"
-                android:hint="Introducir nombre de producto"
+                android:hint="Ingresar nuevo nombre"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/edit_precio"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:hint="Introducir precio de producto"
+                android:hint="Ingresar nuevo precio"
                 android:inputType="number|numberDecimal"
                 android:textSize="24sp" />
 
@@ -40,14 +40,14 @@
                 android:id="@+id/edit_imagen"
                 android:layout_width="match_parent"
                 android:layout_height="167dp"
-                android:hint="Introducir url de imagen"
+                android:hint="Nueva URl"
                 android:textSize="24sp" />
 
             <Button
                 android:id="@+id/actu_prod"
                 android:layout_width="match_parent"
                 android:layout_height="66dp"
-                android:text="Crear Producto" />
+                android:text="Actulizar poducto" />
         </LinearLayout>
 
     </FrameLayout>
