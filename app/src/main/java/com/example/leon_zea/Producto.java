@@ -1,8 +1,11 @@
 package com.example.leon_zea;
 
+import com.google.firebase.firestore.Exclude;
+
 import java.io.Serializable;
 
 public class Producto implements Serializable {
+    private String Id;
     private  String nombre;
     private Double precio;
     private String url_img;
@@ -40,4 +43,14 @@ public class Producto implements Serializable {
         this.precio = precio;
         this.url_img = url_img;
     }
+    @Exclude
+    public String getId(){
+        return Id;
+    }
+    @Exclude
+    public void setId(String id){
+        this.Id = id;
+    }
+
+
 }

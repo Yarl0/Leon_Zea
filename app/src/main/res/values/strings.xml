@@ -4,4 +4,5 @@
     <string name="precio">Precio</string>
     <string name="txt_listadp">listado de productos</string>
     <string name="txt_detalles">Detalle productos</string>
+    <string name="txt_listado">Listado de Productos</string>
 </resources>

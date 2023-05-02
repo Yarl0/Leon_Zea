@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Formulario_activity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                app:srcCompat="@drawable/ce5699233cbc0f142250b520d967dff7" />
+
+            <TextView
+                android:id="@+id/prod_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:hint="Introducir nombre de producto"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/prod_precio"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Introducir precio de producto"
+                android:inputType="number|numberDecimal"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/prod_imagen"
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:hint="Introducir url de imagen"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/crear_prod"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:text="Crear Producto" />
+        </LinearLayout>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

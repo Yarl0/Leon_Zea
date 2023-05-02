@@ -6,20 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="131dp"
+        android:layout_height="41dp"
+        android:onClick="clickAtras"
+        android:text="Atras"
+        app:layout_constraintBottom_toTopOf="@+id/rv_listado_productos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recvwpro"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnagregar"
-        tools:layout_editor_absoluteX="1dp" />
+        android:id="@+id/rv_listado_productos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/btnagregar"
-        android:layout_width="312dp"
-        android:layout_height="48dp"
-        android:text="Agregar un Producto"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/crear_btn"
+        android:layout_width="234dp"
+        android:layout_height="39dp"
+        android:onClick="clickAdd"
+        android:text="Crear producto"
+        app:layout_constraintBottom_toTopOf="@+id/rv_listado_productos"
+        app:layout_constraintEnd_toStartOf="@+id/atras"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
